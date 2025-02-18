@@ -2,102 +2,170 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Supermarket Assistant</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      margin: 0;
-      padding: 0;
-    }
-
-    .container {
-      width: 90%;
-      margin: auto;
-      padding: 20px;
-    }
-
-    .search-box {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 20px;
-    }
-
-    .search-box input {
-      width: 50%;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-
-    .search-box button {
-      padding: 10px;
-      background-color: #0288D1;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .layout {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .map {
-      width: 60%;
-      height: 400px;
-      background-color: white;
-      border: 2px solid black;
-      position: relative;
-    }
-
-    .shopping-list,
-    .offers {
-      width: 35%;
-      background-color: white;
-      padding: 10px;
-      border: 2px solid black;
-    }
-
-    .feedback {
-      margin-top: 20px;
-      padding: 10px;
-      background-color: white;
-      border: 2px solid black;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermarket Assistant</title>
+    
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #06fec8;
+        }
+    </style>
 </head>
 
 <body>
-  <div class="container">
-    <div class="search-box">
-      <input type="text" placeholder="Search for an item...">
-      <button>Search</button>
+    <div id="map-container">
+        <h1>Supermarket Mini Map</h1>
+        <div id="search-container">
+            <input type="text" id="search-box" placeholder="Search for an item...">
+            <div id="suggestions" class="suggestions-box"></div>
+            <button id="search-button">Search</button>
+        </div>
+        <div id="map">
+            <!-- Racks will be dynamically generated -->
+        </div>
     </div>
 
-    <div class="layout">
-      <div class="map"> <!-- Placeholder for the rack layout -->
-        <p style="text-align:center;">Supermarket Layout</p>
-      </div>
-      <div class="shopping-list"> <!-- Placeholder for shopping list -->
-        <h3>Your Shopping List</h3>
-        <ul>
-          <li>Item 1 - Price - Position</li>
-          <li>Item 2 - Price - Position</li>
-        </ul>
-        <button>Finish</button>
-      </div>
+    <div id="offers-container">
+        <h2>Explore Offers</h2>
+        <div class="offers-grid">
+            <div class="offer">
+                <img src="images/offer1.jpg" alt="Offer">
+                <span>Discount on Pasta</span>
+                <button onclick="addToList('Discount on Pasta')">Add to List</button>
+            </div>
+            <div class="offer">
+                <img src="images/offer2.jpg" alt="Offer">
+                <span>Buy 1 Get 1 Free Chips</span>
+                <button onclick="addToList('Buy 1 Get 1 Free Chips')">Add to List</button>
+            </div>
+            <div class="offer">
+                <img src="images/offer3.jpg" alt="Offer">
+                <span>50% Off on Fresh Fruits</span>
+                <button onclick="addToList('50% Off on Fresh Fruits')">Add to List</button>
+            </div>
+            <div class="offer">
+                <img src="images/offer4.jpg" alt="Offer">
+                <span>Buy 2 Get 1 Free on Cereal</span>
+                <button onclick="addToList('Buy 2 Get 1 Free on Cereal')">Add to List</button>
+            </div>
+            <div class="offer">
+                <img src="images/offer5.jpg" alt="Offer">
+                <span>Save 30% on Organic Vegetables</span>
+                <button onclick="addToList('Save 30% on Organic Vegetables')">Add to List</button>
+            </div>
+            <div class="offer">
+                <img src="images/offer6.jpg" alt="Offer">
+                <span>Free Delivery on Orders Over $50</span>
+                <button onclick="addToList('Free Delivery on Orders Over $50')">Add to List</button>
+            </div>
+            <div class="offer">
+                <img src="images/offer7.jpg" alt="Offer">
+                <span>Buy 1 Get 1 Free on Frozen Foods</span>
+                <button onclick="addToList('Buy 1 Get 1 Free on Frozen Foods')">Add to List</button>
+            </div>
+            <div class="offer">
+                <img src="images/offer8.jpg" alt="Offer">
+                <span>20% Off on Household Cleaning Products</span>
+                <button onclick="addToList('20% Off on Household Cleaning Products')">Add to List</button>
+            </div>
+            <div class="offer">
+                <img src="images/offer9.jpg" alt="Offer">
+                <span>Buy 3 Get 1 Free on Snacks</span>
+                <button onclick="addToList('Buy 3 Get 1 Free on Snacks')">Add to List</button>
+            </div>
+            <div class="offer">
+                <img src="images/offer10.jpg" alt="Offer">
+                <span>Get a Free Drink with Every Pizza Order</span>
+                <button onclick="addToList('Get a Free Drink with Every Pizza Order')">Add to List</button>
+            </div>
+            <div class="offer">
+                <img src="images/offer11.jpg" alt="Offer">
+                <span>Save $5 on Meat Purchases Over $25</span>
+                <button onclick="addToList('Save $5 on Meat Purchases Over $25')">Add to List</button>
+            </div>
+            <div class="offer">
+                <img src="images/offer12.jpg" alt="Offer">
+                <span>10% Off on Dairy Products</span>
+                <button onclick="addToList('10% Off on Dairy Products')">Add to List</button>
+            </div>
+            <div class="offer">
+                <img src="images/offer13.jpg" alt="Offer">
+                <span>Discounted Price on Select Wines</span>
+                <button onclick="addToList('Discounted Price on Select Wines')">Add to List</button>
+            </div>
+            <div class="offer">
+                <img src="images/offer14.jpg" alt="Offer">
+                <span>25% Off on Breakfast Items</span>
+                <button onclick="addToList('25% Off on Breakfast Items')">Add to List</button>
+            </div>
+            <div class="offer">
+                <img src="images/offer15.jpg" alt="Offer">
+                <span>Free Toppings with Every Sandwich</span>
+                <button onclick="addToList('Free Toppings with Every Sandwich')">Add to List</button>
+            </div>
+            <div class="offer">
+                <img src="images/offer16.jpg" alt="Offer">
+                <span>Save 40% on Baking Ingredients</span>
+                <button onclick="addToList('Save 40% on Baking Ingredients')">Add to List</button>
+            </div>
+            <div class="offer">
+                <img src="images/offer17.jpg" alt="Offer">
+                <span>Get 2 Free Bags with Every Bulk Purchase</span>
+                <button onclick="addToList('Get 2 Free Bags with Every Bulk Purchase')">Add to List</button>
+            </div>
+            <div class="offer">
+                <img src="images/offer18.jpg" alt="Offer">
+                <span>Buy 1 Get 1 Free on Pasta Sauces</span>
+                <button onclick="addToList('Buy 1 Get 1 Free on Pasta Sauces')">Add to List</button>
+            </div>
+            <div class="offer">
+                <img src="images/offer19.jpg" alt="Offer">
+                <span>Save 15% on Frozen Desserts</span>
+                <button onclick="addToList('Save 15% on Frozen Desserts')">Add to List</button>
+            </div>
+            <div class="offer">
+                <img src="images/offer20.jpg" alt="Offer">
+                <span>Get 5% Cashback on Your First Online Purchase</span>
+                <button onclick="addToList('Get 5% Cashback on Your First Online Purchase')">Add to List</button>
+            </div>
+            <div class="offer">
+                <img src="images/offer21.jpg" alt="Offer">
+                <span>10% Off on Health and Wellness Products</span>
+                <button onclick="addToList('10% Off on Health and Wellness Products')">Add to List</button>
+            </div>
+            <div class="offer">
+                <img src="images/offer22.jpg" alt="Offer">
+                <span>Save $3 on Bread & Bakery Items Over $15</span>
+                <button onclick="addToList('Save $3 on Bread & Bakery Items Over $15')">Add to List</button>
+            </div>
+            <div class="offer">
+                <img src="images/offer23.jpg" alt="Offer">
+                <span>Free Sample with Every Purchase of Gourmet Products</span>
+                <button onclick="addToList('Free Sample with Every Purchase of Gourmet Products')">Add to List</button>
+            </div>
+            <div class="offer">
+                <img src="images/offer1.jpg" alt="Offer">
+                <span>Discount on Pasta</span>
+                <button onclick="addToList('Discount on Pasta')">Add to List</button>
+            </div>
+        </div>
     </div>
 
-    <div class="feedback">
-      <h3>Submit Your Feedback</h3>
-      <textarea placeholder="Enter your suggestions here..."></textarea>
-      <button>Submit</button>
+    <div id="shopping-list">
+        <h2>Shopping List</h2>
+        <input type="text" id="shopping-list-input" placeholder="Type an item...">
+        <button onclick="addToListFromInput()">Add</button>
+        <ul id="shopping-list-items"></ul>
+        <button id="sort-location">Sort by Location</button>
     </div>
-  </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
