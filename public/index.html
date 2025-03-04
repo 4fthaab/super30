@@ -21,7 +21,7 @@
 
 <body>
     <div id="map-container">
-        <h1>Supermarket Mini Map</h1>
+        <h1>SEARCH ITEMS</h1>
         <div id="search-container">
             <input type="text" id="search-box" placeholder="Search for an item...">
             <div id="suggestions" class="suggestions-box"></div>
@@ -31,139 +31,197 @@
             <!-- Racks will be dynamically generated -->
         </div>
     </div>
+    <div id="offers-cart-container">
+        <div id="offers-container">
+            <h2>EXPLORE THE TRENDING OFFERS!</h2>
+            <div class="offers-grid">
+                <div class="offer">
+                    <img src="images/offer1.jpg" alt="Offer">
+                    <span class="title">PASTA</span>
+                    <div class="price">
+                        <del>₹300</del> ₹200
+                    </div>
+                    <button onclick="addToList('Pasta --- r3c2 --- ₹200')">Add to Cart</button>
+                </div>
+                <div class="offer">
+                    <img src="images/offer2.jpg" alt="Offer">
+                    <span class="title">OLIVE OIL</span>
+                    <div class="price">
+                        <del>₹500</del> ₹350
+                    </div>
+                    <button onclick="addToList('Olive Oil --- r2c3 --- ₹350')">Add to Cart</button>
+                </div>
 
-    <div id="offers-container">
-        <h2>Explore Offers</h2>
-        <div class="offers-grid">
-            <div class="offer">
-                <img src="./images/offer1.jpeg" alt="Offer">
-                <span>Discount on Pasta</span>
-                <button onclick="addToList('Discount on Pasta')">Add to List</button>
-            </div>
-            <div class="offer">
-                <img src="images/offer2.jpg" alt="Offer">
-                <span>Buy 1 Get 1 Free Chips</span>
-                <button onclick="addToList('Buy 1 Get 1 Free Chips')">Add to List</button>
-            </div>
-            <div class="offer">
-                <img src="images/offer3.jpg" alt="Offer">
-                <span>50% Off on Fresh Fruits</span>
-                <button onclick="addToList('50% Off on Fresh Fruits')">Add to List</button>
-            </div>
-            <div class="offer">
-                <img src="images/offer4.jpg" alt="Offer">
-                <span>Buy 2 Get 1 Free on Cereal</span>
-                <button onclick="addToList('Buy 2 Get 1 Free on Cereal')">Add to List</button>
-            </div>
-            <div class="offer">
-                <img src="images/offer5.jpg" alt="Offer">
-                <span>Save 30% on Organic Vegetables</span>
-                <button onclick="addToList('Save 30% on Organic Vegetables')">Add to List</button>
-            </div>
-            <div class="offer">
-                <img src="images/offer6.jpg" alt="Offer">
-                <span>Free Delivery on Orders Over $50</span>
-                <button onclick="addToList('Free Delivery on Orders Over $50')">Add to List</button>
-            </div>
-            <div class="offer">
-                <img src="images/offer7.jpg" alt="Offer">
-                <span>Buy 1 Get 1 Free on Frozen Foods</span>
-                <button onclick="addToList('Buy 1 Get 1 Free on Frozen Foods')">Add to List</button>
-            </div>
-            <div class="offer">
-                <img src="images/offer8.jpg" alt="Offer">
-                <span>20% Off on Household Cleaning Products</span>
-                <button onclick="addToList('20% Off on Household Cleaning Products')">Add to List</button>
-            </div>
-            <div class="offer">
-                <img src="images/offer9.jpg" alt="Offer">
-                <span>Buy 3 Get 1 Free on Snacks</span>
-                <button onclick="addToList('Buy 3 Get 1 Free on Snacks')">Add to List</button>
-            </div>
-            <div class="offer">
-                <img src="images/offer10.jpg" alt="Offer">
-                <span>Get a Free Drink with Every Pizza Order</span>
-                <button onclick="addToList('Get a Free Drink with Every Pizza Order')">Add to List</button>
-            </div>
-            <div class="offer">
-                <img src="images/offer11.jpg" alt="Offer">
-                <span>Save $5 on Meat Purchases Over $25</span>
-                <button onclick="addToList('Save $5 on Meat Purchases Over $25')">Add to List</button>
-            </div>
-            <div class="offer">
-                <img src="images/offer12.jpg" alt="Offer">
-                <span>10% Off on Dairy Products</span>
-                <button onclick="addToList('10% Off on Dairy Products')">Add to List</button>
-            </div>
-            <div class="offer">
-                <img src="images/offer13.jpg" alt="Offer">
-                <span>Discounted Price on Select Wines</span>
-                <button onclick="addToList('Discounted Price on Select Wines')">Add to List</button>
-            </div>
-            <div class="offer">
-                <img src="images/offer14.jpg" alt="Offer">
-                <span>25% Off on Breakfast Items</span>
-                <button onclick="addToList('25% Off on Breakfast Items')">Add to List</button>
-            </div>
-            <div class="offer">
-                <img src="images/offer15.jpg" alt="Offer">
-                <span>Free Toppings with Every Sandwich</span>
-                <button onclick="addToList('Free Toppings with Every Sandwich')">Add to List</button>
-            </div>
-            <div class="offer">
-                <img src="images/offer16.jpg" alt="Offer">
-                <span>Save 40% on Baking Ingredients</span>
-                <button onclick="addToList('Save 40% on Baking Ingredients')">Add to List</button>
-            </div>
-            <div class="offer">
-                <img src="images/offer17.jpg" alt="Offer">
-                <span>Get 2 Free Bags with Every Bulk Purchase</span>
-                <button onclick="addToList('Get 2 Free Bags with Every Bulk Purchase')">Add to List</button>
-            </div>
-            <div class="offer">
-                <img src="images/offer18.jpg" alt="Offer">
-                <span>Buy 1 Get 1 Free on Pasta Sauces</span>
-                <button onclick="addToList('Buy 1 Get 1 Free on Pasta Sauces')">Add to List</button>
-            </div>
-            <div class="offer">
-                <img src="images/offer19.jpg" alt="Offer">
-                <span>Save 15% on Frozen Desserts</span>
-                <button onclick="addToList('Save 15% on Frozen Desserts')">Add to List</button>
-            </div>
-            <div class="offer">
-                <img src="images/offer20.jpg" alt="Offer">
-                <span>Get 5% Cashback on Your First Online Purchase</span>
-                <button onclick="addToList('Get 5% Cashback on Your First Online Purchase')">Add to List</button>
-            </div>
-            <div class="offer">
-                <img src="images/offer21.jpg" alt="Offer">
-                <span>10% Off on Health and Wellness Products</span>
-                <button onclick="addToList('10% Off on Health and Wellness Products')">Add to List</button>
-            </div>
-            <div class="offer">
-                <img src="images/offer22.jpg" alt="Offer">
-                <span>Save $3 on Bread & Bakery Items Over $15</span>
-                <button onclick="addToList('Save $3 on Bread & Bakery Items Over $15')">Add to List</button>
-            </div>
-            <div class="offer">
-                <img src="images/offer23.jpg" alt="Offer">
-                <span>Free Sample with Every Purchase of Gourmet Products</span>
-                <button onclick="addToList('Free Sample with Every Purchase of Gourmet Products')">Add to List</button>
-            </div>
-            <div class="offer">
-                <img src="images/offer1.jpg" alt="Offer">
-                <span>Discount on Pasta</span>
-                <button onclick="addToList('Discount on Pasta')">Add to List</button>
+                <div class="offer">
+                    <img src="images/offer3.jpg" alt="Offer">
+                    <span class="title">BREAD</span>
+                    <div class="price">
+                        <del>₹50</del> ₹35
+                    </div>
+                    <button onclick="addToList('Bread --- r4c1 --- ₹35')">Add to Cart</button>
+                </div>
+
+                <div class="offer">
+                    <img src="images/offer4.jpg" alt="Offer">
+                    <span class="title">COFFEE</span>
+                    <div class="price">
+                        <del>₹250</del> ₹180
+                    </div>
+                    <button onclick="addToList('Coffee --- r5c3 --- ₹180')">Add to Cart</button>
+                </div>
+
+                <div class="offer">
+                    <img src="images/offer5.jpg" alt="Offer">
+                    <span class="title">MILK</span>
+                    <div class="price">
+                        <del>₹70</del> ₹50
+                    </div>
+                    <button onclick="addToList('Milk --- r3c1 --- ₹50')">Add to Cart</button>
+                </div>
+
+                <div class="offer">
+                    <img src="images/offer6.jpg" alt="Offer">
+                    <span class="title">RICE</span>
+                    <div class="price">
+                        <del>₹1200</del> ₹950
+                    </div>
+                    <button onclick="addToList('Rice --- r1c2 --- ₹950')">Add to Cart</button>
+                </div>
+
+                <div class="offer">
+                    <img src="images/offer7.jpg" alt="Offer">
+                    <span class="title">CHOCOLATE</span>
+                    <div class="price">
+                        <del>₹150</del> ₹100
+                    </div>
+                    <button onclick="addToList('Chocolate --- r5c2 --- ₹100')">Add to Cart</button>
+                </div>
+
+                <div class="offer">
+                    <img src="images/offer8.jpg" alt="Offer">
+                    <span class="title">SUGAR</span>
+                    <div class="price">
+                        <del>₹60</del> ₹40
+                    </div>
+                    <button onclick="addToList('Sugar --- r2c2 --- ₹40')">Add to Cart</button>
+                </div>
+
+                <div class="offer">
+                    <img src="images/offer9.jpg" alt="Offer">
+                    <span class="title">TOOTHPASTE</span>
+                    <div class="price">
+                        <del>₹90</del> ₹65
+                    </div>
+                    <button onclick="addToList('Toothpaste --- r6c1 --- ₹65')">Add to Cart</button>
+                </div>
+
+                <div class="offer">
+                    <img src="images/offer10.jpg" alt="Offer">
+                    <span class="title">BUTTER</span>
+                    <div class="price">
+                        <del>₹220</del> ₹180
+                    </div>
+                    <button onclick="addToList('Butter --- r4c3 --- ₹180')">Add to Cart</button>
+                </div>
+
+                <div class="offer">
+                    <img src="images/offer11.jpg" alt="Offer">
+                    <span class="title">JUICE</span>
+                    <div class="price">
+                        <del>₹90</del> ₹65
+                    </div>
+                    <button onclick="addToList('Juice --- r7c2 --- ₹65')">Add to Cart</button>
+                </div>
+
+                <div class="offer">
+                    <img src="images/offer12.jpg" alt="Offer">
+                    <span class="title">POTATO CHIPS</span>
+                    <div class="price">
+                        <del>₹120</del> ₹85
+                    </div>
+                    <button onclick="addToList('Potato Chips --- r5c1 --- ₹85')">Add to Cart</button>
+                </div>
+
+                <div class="offer">
+                    <img src="images/offer13.jpg" alt="Offer">
+                    <span class="title">DAL</span>
+                    <div class="price">
+                        <del>₹180</del> ₹130
+                    </div>
+                    <button onclick="addToList('Dal --- r2c1 --- ₹130')">Add to Cart</button>
+                </div>
+
+                <div class="offer">
+                    <img src="images/offer14.jpg" alt="Offer">
+                    <span class="title">BISCUITS</span>
+                    <div class="price">
+                        <del>₹40</del> ₹30
+                    </div>
+                    <button onclick="addToList('Biscuits --- r4c2 --- ₹30')">Add to Cart</button>
+                </div>
+
+                <div class="offer">
+                    <img src="images/offer15.jpg" alt="Offer">
+                    <span class="title">HANDWASH</span>
+                    <div class="price">
+                        <del>₹140</del> ₹100
+                    </div>
+                    <button onclick="addToList('Handwash --- r6c3 --- ₹100')">Add to Cart</button>
+                </div>
+
+                <div class="offer">
+                    <img src="images/offer16.jpg" alt="Offer">
+                    <span class="title">ICE CREAM</span>
+                    <div class="price">
+                        <del>₹180</del> ₹140
+                    </div>
+                    <button onclick="addToList('Ice Cream --- r7c3 --- ₹140')">Add to Cart</button>
+                </div>
+
+                <div class="offer">
+                    <img src="images/offer17.jpg" alt="Offer">
+                    <span class="title">SOAP</span>
+                    <div class="price">
+                        <del>₹50</del> ₹35
+                    </div>
+                    <button onclick="addToList('Soap --- r6c2 --- ₹35')">Add to Cart</button>
+                </div>
+
+                <div class="offer">
+                    <img src="images/offer18.jpg" alt="Offer">
+                    <span class="title">DETERGENT</span>
+                    <div class="price">
+                        <del>₹220</del> ₹180
+                    </div>
+                    <button onclick="addToList('Detergent --- r6c1 --- ₹180')">Add to Cart</button>
+                </div>
+
+                <div class="offer">
+                    <img src="images/offer19.jpg" alt="Offer">
+                    <span class="title">NOODLES</span>
+                    <div class="price">
+                        <del>₹80</del> ₹60
+                    </div>
+                    <button onclick="addToList('Noodles --- r3c3 --- ₹60')">Add to Cart</button>
+                </div>
+
+                <div class="offer">
+                    <img src="images/offer20.jpg" alt="Offer">
+                    <span class="title">CORNFLAKES</span>
+                    <div class="price">
+                        <del>₹250</del> ₹200
+                    </div>
+                    <button onclick="addToList('Cornflakes --- r4c1 --- ₹200')">Add to Cart</button>
+                </div>
             </div>
         </div>
-    </div>
-
-    <div id="shopping-list">
-        <h2>Shopping List</h2>
-        <input type="text" id="shopping-list-input" placeholder="Type an item...">
-        <button onclick="addToListFromInput()">Add</button>
-        <ul id="shopping-list-items"></ul>
-        <button id="sort-location">Sort by Location</button>
+        <div id="shopping-list">
+            <h2>SHOPPING CART</h2>
+            <input type="text" id="shopping-list-input" placeholder="Type an item...">
+            <button onclick="addToListFromInput()">Add</button>
+            <ul id="shopping-list-items"></ul>
+            <!--<button id="sort-location">Sort by Location</button>-->
+        </div>
     </div>
     <script src="script.js"></script>
 </body>

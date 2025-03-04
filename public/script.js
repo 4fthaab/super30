@@ -59,13 +59,13 @@ const itemLocations = {
     "Peas": { rack: 2, compartment: 17, image: "images/peas.jpeg" },
     "Beans": { rack: 3, compartment: 5, image: "images/beans.jpeg" },
     "Lentils": { rack: 4, compartment: 15, image: "images/lentils.jpeg" },
-    "Rice": { rack: 1, compartment: 4, image: "images/rice.jpeg" },
+    "Rice": { rack: 1, compartment: 24, image: "images/rice.jpeg" },
     "Quinoa": { rack: 2, compartment: 3, image: "images/quinoa.jpeg" },
-    "Barley": { rack: 3, compartment: 6, image: "images/barley.jpeg" },
+    "Barley": { rack: 3, compartment: 26, image: "images/barley.jpeg" },
     "Oats": { rack: 4, compartment: 16, image: "images/oats.jpeg" },
     "Bread": { rack: 1, compartment: 1, image: "images/bread.jpeg" },
     "Bagels": { rack: 2, compartment: 2, image: "images/bagels.jpeg" },
-    "Croissants": { rack: 3, compartment: 3, image: "images/croissants.jpeg" },
+    "Croissants": { rack: 3, compartment: 23, image: "images/croissants.jpeg" },
     "Muffins": { rack: 4, compartment: 17, image: "images/muffins.jpeg" },
     "Donuts": { rack: 1, compartment: 16, image: "images/donuts.jpeg" },
     "Cookies": { rack: 2, compartment: 1, image: "images/cookies.jpeg" },
@@ -73,34 +73,34 @@ const itemLocations = {
     "Cakes": { rack: 4, compartment: 18, image: "images/cakes.jpeg" },
     "Pies": { rack: 1, compartment: 19, image: "images/pies.jpeg" },
     "Pastries": { rack: 2, compartment: 19, image: "images/pastries.jpeg" },
-    "Ice Cream": { rack: 3, compartment: 9, image: "images/icecream.jpeg" },
+    "Ice Cream": { rack: 3, compartment: 29, image: "images/icecream.jpeg" },
     "Frozen Yogurt": { rack: 4, compartment: 19, image: "images/frozenyogurt.jpeg" },
     "Popsicles": { rack: 1, compartment: 18, image: "images/popsicles.jpeg" },
     "Frozen Pizza": { rack: 2, compartment: 20, image: "images/frozenpizza.jpeg" },
-    "Frozen Vegetables": { rack: 3, compartment: 10, image: "images/frozenvegetables.jpeg" },
+    "Frozen Vegetables": { rack: 3, compartment: 30, image: "images/frozenvegetables.jpeg" },
     "Frozen Meals": { rack: 4, compartment: 20, image: "images/frozenmeals.jpeg" },
     "Water": { rack: 1, compartment: 7, image: "images/water.jpeg" },
-    "Soda": { rack: 2, compartment: 5, image: "images/soda.jpeg" },
-    "Juice": { rack: 3, compartment: 2, image: "images/juice.jpeg" },
+    "Soda": { rack: 2, compartment: 25, image: "images/soda.jpeg" },
+    "Juice": { rack: 3, compartment: 22, image: "images/juice.jpeg" },
     "Milk": { rack: 4, compartment: 4, image: "images/milk.jpeg" },
-    "Coffee": { rack: 1, compartment: 9, image: "images/coffee.jpeg" },
+    "Coffee": { rack: 1, compartment: 29, image: "images/coffee.jpeg" },
     "Tea": { rack: 2, compartment: 8, image: "images/tea.jpeg" },
     "Energy Drinks": { rack: 3, compartment: 12, image: "images/energydrinks.jpeg" },
-    "Sports Drinks": { rack: 4, compartment: 6, image: "images/sportsdrinks.jpeg" },
+    "Sports Drinks": { rack: 4, compartment: 26, image: "images/sportsdrinks.jpeg" },
     "Wine": { rack: 1, compartment: 14, image: "images/wine.jpeg" },
     "Beer": { rack: 2, compartment: 18, image: "images/beer.jpeg" },
     "Liquor": { rack: 3, compartment: 16, image: "images/liquor.jpeg" },
-    "Cocktail Mixers": { rack: 4, compartment: 1, image: "images/cocktailmixers.jpeg" }
+    "Cocktail Mixers": { rack: 4, compartment: 21, image: "images/cocktailmixers.jpeg" }
 };
 
 // Create racks dynamically
 const map = document.getElementById("map");
-for (let i = 1; i <= 5; i++) {
+for (let i = 1; i <= 4; i++) {
     const rack = document.createElement("div");
     rack.classList.add("rack");
     rack.id = `rack${i}`;
 
-    for (let j = 1; j <= 20; j++) {
+    for (let j = 1; j <= 30; j++) {
         const compartment = document.createElement("div");
         compartment.textContent = j;
         compartment.id = `rack${i}-compartment${j}`;
